@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-cli",
+  "version": "1.0.0",
+  "description": "Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./style.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./style.css -o ./css/main.css --watch"
+  },
+  "keywords": [
+    "tailwind",
+    "css"
+  ],
+  "author": "Akhlesh Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}

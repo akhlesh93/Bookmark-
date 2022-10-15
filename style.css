@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+
+/********************
+* container
+********************/
+
+main section {
+	@apply py-16;
+}
+
+.container {
+	@apply mx-auto p-4;
+}
+@media (min-width: 1536px) {
+	.container {
+		max-width: 1535px;
+	}
+}
+@media (max-width: 1535px) {
+	.container {
+		max-width: 1280px;
+	}
+}
+@media (max-width: 1279px) {
+	.container {
+		max-width: 1024px;
+	}
+}
+@media (max-width: 1023px) {
+	.container {
+		max-width: 768px;
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		max-width: 640px;
+	}
+}
+@media (max-width: 639px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+/********************
+* Header
+********************/
+
+.nav__link {
+	@apply text-grayishBlue hover:text-softRed uppercase tracking-widest;
+}
+
+.header-nav {
+	@apply flex items-center space-x-8;
+}
+
+.logo-open {
+	@apply hidden;
+}
+
+@media (max-width: 767px) {
+	.mobile-open .logo {
+		@apply hidden;
+	}
+
+	.mobile-open .logo-open {
+		@apply block relative z-30;
+	}
+
+	.header-nav {
+		@apply hidden fixed z-20 left-0 right-0 top-0 bottom-0 bg-veryDarkBlue opacity-90 flex-col space-x-0 items-center justify-start pt-40 divide-y divide-gray-500 px-6 overflow-y-auto;
+	}
+
+	.header-nav > li {
+		@apply w-full py-3 text-center;
+	}
+
+	.nav__link {
+		@apply text-white;
+	}
+
+	.mobile-open .header-nav {
+		@apply flex;
+	}
+}
+
+/********************
+* Button
+********************/
+
+.btn {
+	@apply inline-block px-8 py-3 text-white border-2 rounded-lg shadow-md  hover:bg-white font-semibold;
+}
+
+.btn__softred {
+	@apply bg-softRed border-softRed hover:text-softRed;
+}
+
+.btn__blue {
+	@apply bg-softBlue border-softBlue hover:text-softBlue px-4 py-4 rounded;
+}
+
+.btn__gray {
+	@apply bg-gray-300 border-gray-300 px-4 py-4 rounded;
+}
+
+/********************
+* Bg hero
+********************/
+
+.bg-hero {
+	@apply w-screen h-3/4 absolute left-1/4 top-1/3 rounded-tl-full rounded-bl-full bg-blue-500;
+}
+
+/********************
+* Section header
+********************/
+
+.section-header h2 {
+	@apply mb-6 text-4xl font-semibold text-center;
+}
+
+.section-header p {
+	@apply max-w-md mx-auto text-center text-grayishBlue;
+}
+
+/********************
+* Tabber
+********************/
+
+.tab-buttons > li {
+	@apply cursor-pointer w-1/3 text-center py-6 hover:text-softRed;
+}
+
+.tab-buttons > li.active {
+	@apply border-b-4 text-softRed border-softRed;
+}
+
+.tab-panels .tab-panel {
+	@apply space-x-8 md:space-x-0 md:space-y-12 md:flex-col;
+}
+
+.tab-panel .panel-img {
+	@apply relative w-1/2 md:w-full;
+}
+
+.tab-panel .panel-img img {
+	@apply relative z-10 mx-auto;
+}
+
+.tab-panel .panel-content {
+	@apply w-1/2 space-y-6 md:w-full md:text-center;
+}
+
+.tab-panel .panel-content h3 {
+	@apply text-3xl font-semibold;
+}
+
+.tab-panel .panel-content p {
+	@apply max-w-md md:mx-auto text-grayishBlue;
+}
+
+.bg-tabs {
+	@apply w-screen h-3/4 absolute right-1/4 top-1/2 rounded-tr-full rounded-br-full bg-blue-500;
+}
+
+/********************
+* Download section
+********************/
+
+.download-tile {
+	@apply w-1/3 md:w-full md:max-w-sm p-6 shadow-xl rounded-lg text-center space-y-6;
+}
+
+.download-tile img {
+	@apply mx-auto;
+}
+
+.download-tile h5 {
+	@apply text-xl font-semibold;
+}
+
+.download-tile p {
+	@apply text-gray-400;
+}
+
+.download-tile .download-button {
+	@apply bg-dots bg-repeat-x pt-6 -mx-6;
+}
+
+/********************
+* Accordian
+********************/
+
+.accord {
+	@apply border-b;
+}
+
+.accord h2 {
+	@apply flex justify-between items-center py-3 font-semibold text-gray-500 hover:text-red-500 cursor-pointer duration-200 select-none;
+}
+
+.accord h2 > span {
+	@apply pointer-events-none;
+}
+
+.accord.open h2 > span {
+	@apply rotate-180 transition-transform duration-200;
+}
+
+.accord p {
+	@apply hidden pb-4 text-gray-400;
+}
+
+.accord.open p {
+	@apply block;
+}
+
+/********************
+* Mobile trigger
+********************/
+
+.menu-icon {
+	@apply w-full border-b-4 border-black pointer-events-none transition-all;
+}
+
+.mobile-open .menu-icon {
+	@apply border-white;
+}
+
+.open .menu-icon.top {
+	@apply rotate-45 translate-y-2;
+}
+
+.open .menu-icon.middle {
+	@apply opacity-0;
+}
+
+.open .menu-icon.bottom {
+	@apply -rotate-45 -translate-y-2;
+}
+
+/********************
+* Tailwind utilities
+********************/
+
+@tailwind utilities;
